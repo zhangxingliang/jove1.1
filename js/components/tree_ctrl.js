@@ -73,7 +73,7 @@ const tree_ctrl =
               // item.name should be item.guid
               var materials = this.$store.getters.currentNode.children.filter(item=>data.indexOf(item.name)>-1)
               this.$store.dispatch({
-                type : types.MOVE_MATERIALS
+                type : types.MOVE_MATERIALS,
                 target : this.node,
                 data : data
               })

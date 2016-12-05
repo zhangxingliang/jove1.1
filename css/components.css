@@ -102,25 +102,27 @@
 
 .material
 {
-  width:128px;
-  height:94px;
+  width: 90px;
+  height: 80px;
   box-sizing: border-box;
-  border: 1px solid transparent;
-  padding: 2px;
   margin: 5px 5px;
+  background: #393939;
+  position: relative;
 }
 .material:hover
 {
   /*border: 1px solid #f5a634;*/
   background-color: #333;
 }
+.material .material_status
+{
+  height:15px;
+}
 .material .material_icon_container
 {
-  width: 128px;
-  height: 69px;
-  line-height: 69px;
-  vertical-align: middle;
+  line-height: 50px;
   text-align: center;
+  background-color: #2e2e2e;
 }
 .material .clipping
 {
@@ -128,25 +130,30 @@
 }
 .material .material_icon_container span
 {
-  width: 70px;
-  height: 69px;
+  width: 40px;
+  height: 32px;
+  vertical-align: middle;
   display: inline-block;
+  background-size: contain !important;
 }
 .material .material_icon_container img
 {
-  max-width: 128px;
-  max-height: 69px;
+  max-width: 90px;
+  max-height: 50px;
   vertical-align: middle;
 }
 .material .material_info
 {
-  color:#cfd2d4;
-  font-size: 14px;
+  color: #cfd2d4;
+  font-size: 12px;
   white-space: nowrap;
   overflow: hidden;
   cursor: default;
-  height: 25px;
-  line-height: 25px;
+  height: 15px;
+  line-height: 15px;
+  position: absolute;
+  bottom: 0;
+  margin-left: 2px;
 }
 .material.material_selecting
 {

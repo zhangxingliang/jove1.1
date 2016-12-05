@@ -2,7 +2,11 @@ const actions = {
   [types.GET_MATERIALS](context, payload){
     // http get then commit if need
     if(payload.source.children.length > 0){
-
+      context.commit({
+        type : types.GET_NAVPATH,
+        target : payload.source,
+        data : []
+      })
     }
     else {
       // success commit  fail alert
@@ -10,7 +14,7 @@ const actions = {
           type : types.SET_MATERIALS,
           target : payload.source,
           data : []
-          })
+        })
     }
   },
   [types.TOGGLE_FOLDER](context, payload){
@@ -36,15 +40,17 @@ const actions = {
   [types.UPLOAD_FILES](context, payload){
 
   },
-  [types.MOVE_MATERIALS](context, payload.data){
+  [types.MOVE_MATERIALS](context, payload){
     context.commit({
       type : types.MOVE_MATERIALS,
       data : payload.data,
       target : payload.target
     })
   },
-  [types.COPY_MATERIALS](context, payload){
-
+  [types.BACK_UP](context, payload){
+    context.commit({
+      type : types.BACK_UP
+    })
   },
   [types.CLIP_MATERIALS](context, payload){
 
